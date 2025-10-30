@@ -1,0 +1,29 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+struct Student{
+    string name;
+    int age;
+    string gender;
+    string branch;
+};
+
+int main(){
+    Student *students = new Student[100];
+    cout<<"Array of 100 values created."<<endl;
+    
+    Student *newstudents = new Student[200];
+    for(int i=0; i<100; i++){
+        newstudents[i] = students[i];
+    }
+    
+    delete[] students;
+    students = newstudents;
+    
+    cout<<"Array resized to store 200 values."<<endl;
+    
+    delete[] students;
+
+    return 0;  
+}  
