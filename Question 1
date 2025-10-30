@@ -11,5 +11,6 @@ int main() {
     delete[] Sales;
     Sales = newSales;
     cout<<endl<<"Array resized to store 200 elements."<<endl;
+    delete[] Sales;
     return 0;
 }
