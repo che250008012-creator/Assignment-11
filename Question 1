@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int *Sales = new int[100];
+    cout<<"Array of 100 elements created.";
+    int *newSales = new int[200];
+    for(int j=0; j<10; j++) {
+        newSales[j]=Sales[j];
+    }
+    delete[] Sales;
+    Sales = newSales;
+    cout<<endl<<"Array resized to store 200 elements."<<endl;
+    return 0;
+}
